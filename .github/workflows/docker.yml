@@ -5,6 +5,7 @@ on:
 permissions:
   contents: read
   packages: write
+  id-token: write
 
 concurrency: 
   group: ${{ github.ref }}-${{ github.workflow }}
@@ -15,6 +16,10 @@ env:
 
 jobs:
   build:
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
     strategy:
       matrix:
         include:
@@ -88,6 +93,10 @@ jobs:
           retention-days: 1
 
   merge:
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
     name: Merge
     needs: build
     runs-on: ubuntu-latest
