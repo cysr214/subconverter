@@ -1,0 +1,50 @@
+proxies:
+- name: "xhttp-opts-example"
+  type: vless
+  server: server
+  port: 443
+  uuid: uuid
+  udp: true
+  tls: true
+  network: xhttp
+  alpn:
+    - h2
+  # ech-opts: ...
+  # reality-opts: ...
+  # skip-cert-verify: false
+  # fingerprint: ...
+  # certificate: ...
+  # private-key: ...
+  servername: xxx.com
+  client-fingerprint: chrome
+  encryption: ""
+  xhttp-opts:
+    path: "/"
+    host: xxx.com
+    # mode: "stream-one" # Available: "stream-one", "stream-up" or "packet-up"
+    # headers:
+    #   X-Forwarded-For: ""
+    # no-grpc-header: false
+    # x-padding-bytes: "100-1000"
+    # download-settings:
+    #   ## xhttp part
+    #   path: "/"
+    #   host: xxx.com
+    #   headers:
+    #     X-Forwarded-For: ""
+    #   no-grpc-header: false
+    #   x-padding-bytes: "100-1000"
+    #   ## proxy part
+    #   server: server
+    #   port: 443
+    #   tls: true
+    #   alpn:
+    #     - h2
+    #   ech-opts: ...
+    #   reality-opts: ...
+    #   skip-cert-verify: false
+    #   fingerprint: ...
+    #   certificate: ...
+    #   private-key: ...
+    #   servername: xxx.com
+    #   client-fingerprint: chrome
